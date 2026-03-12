@@ -1,0 +1,1334 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="QD3zc14Xxemgwv0EYqVSaF3yig0s7HyRFtSRDvSm">
+
+    <!-- SEO Meta Tags -->
+            <title>Detail Order</title>
+    <meta name="description" content="Detail Order">
+    <meta name="keywords" content="Detail Order">
+    <meta name="author" content="InClinique">
+    <meta name="copyright" content="InClinique">
+    <meta name="url" content="http://127.0.0.1:5500/customer/orders/2">
+    <meta name="og:site_name" content="Detail Order">
+    <meta name="og:title" content="Detail Order">
+    <meta name="og:description" content="Detail Order">
+    <meta name="og:image" content="http://127.0.0.1:8088/storage/setting/default-logo.png">
+    <meta name="og:type" content="website">
+    <meta name="og:url" content="http://127.0.0.1:5500/customer/orders/2">
+
+    <!-- Favicon -->
+    <link rel="icon" href="http://127.0.0.1:8088/storage/setting" type="image/x-icon">
+    <link rel="shortcut icon" href="http://127.0.0.1:8088/storage/setting" type="image/x-icon">
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+        .label {
+            @apply block text-sm font-semibold text-gray-700 mb-1;
+        }
+
+        .input {
+            @apply w-full rounded-lg border-gray-300 focus:ring-orange-300 focus:border-orange-400;
+        }
+    </style>
+
+            <script type="module" src="http://[::1]:5173/@vite/client"></script><link rel="stylesheet" href="http://[::1]:5173/resources/css/app.css" /><script type="module" src="http://[::1]:5173/resources/js/app.js"></script>    
+    <style>
+    .scrollbar-hide {
+        -ms-overflow-style: none; /* IE & Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none; /* Chrome, Safari */
+    }
+
+    .hero-section {
+        background: linear-gradient(135deg, #FFECC0 0%, #FA812F 100%);
+        /* background: #FFECC0; */
+    }
+
+    .skin-type-btn.active {
+        background-color: #FA812F;
+        color: white;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-overlay {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+
+    .sidebar-overlay.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Search Popup Styles */
+    .search-popup {
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .search-popup.open {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .search-overlay {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+
+    .search-overlay.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Bottom Navigation */
+    .bottom-nav {
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Custom colors */
+    .bg-primary-light {
+        background-color: #FFECC0;
+    }
+
+    .bg-primary-yellow {
+        background-color: #FAB12F;
+    }
+
+    .bg-primary-orange {
+        background-color: #FA812F;
+    }
+
+    .bg-primary-red {
+        background-color: #DD0303;
+    }
+
+    .bg-primary-green {
+        background-color: #28A745;
+    }
+
+    .bg-primary-blue {
+        background-color: #007BFF;
+    }
+
+    .bg-primary-purple {
+        background-color: #6F42C1;
+    }
+
+    .bg-primary-pink {
+        background-color: #E83E8C;
+    }
+
+    .bg-primary-indigo {
+        background-color: #6610F2;
+    }
+
+    .bg-primary-teal {
+        background-color: #20C997;
+    }
+
+    .bg-primary-cyan {
+        background-color: #17A2B8;
+    }
+
+    .text-primary-light {
+        color: #FFECC0;
+    }
+
+    .text-outline-primary-light {
+        -webkit-text-stroke: 1px #FFECC0;
+        color: transparent;
+    }
+
+    .text-primary-dark {
+        color: #343A40;
+    }
+
+    .text-outline-primary-dark {
+        -webkit-text-stroke: 1px #343A40;
+        color: transparent;
+    }
+
+    .text-primary-yellow {
+        color: #FAB12F;
+    }
+
+    .text-outline-primary-yellow {
+        -webkit-text-stroke: 1px #FAB12F;
+        color: transparent;
+    }
+
+    .text-primary-orange {
+        color: #FA812F;
+    }
+
+    .text-outline-primary-orange {
+        -webkit-text-stroke: 1px #FA812F;
+        color: transparent;
+    }
+
+    .text-primary-red {
+        color: #DD0303;
+    }
+
+    .text-outline-primary-red {
+        -webkit-text-stroke: 1px #DD0303;
+        color: transparent;
+    }
+
+    .text-primary-green {
+        color: #28A745;
+    }
+
+    .text-outline-primary-green {
+        -webkit-text-stroke: 1px #28A745;
+        color: transparent;
+    }
+
+    .text-primary-blue {
+        color: #007BFF;
+    }
+
+    .text-outline-primary-blue {
+        -webkit-text-stroke: 1px #007BFF;
+        color: transparent;
+    }
+
+    .border-primary-orange {
+        border-color: #FA812F;
+    }
+
+    .border-outline-primary-orange {
+        -webkit-text-stroke: 1px #FA812F;
+        color: transparent;
+    }
+
+    .hover\:bg-primary-orange:hover {
+        background-color: #FA812F;
+    }
+
+    .hover\:text-primary-orange:hover {
+        color: #FA812F;
+    }
+
+    /* Custom button styles */
+    .btn-block {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+</style>
+
+    <!-- Custom Styles CSS -->
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+<body class="bg-white scrollbar-hide">
+
+    <!-- Header & Navigation -->
+<header class="bg-white shadow-sm sticky top-0 border-b border-primary-orange z-50">
+    <div class="w-full lg:max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center cursor-pointer space-x-4" onclick="window.location.href='http://127.0.0.1:5500';">
+            <h1 class="text-2xl font-bold text-primary-orange">Inclinique<span class="text-primary-red"> Store</span></h1>
+        </div>
+
+        <!-- Desktop Navigation (hanya untuk layar besar) -->
+        <nav class="hidden lg:block space-x-8">
+                            
+                
+                
+                <a href="http://127.0.0.1:5500" class="text-sm xl:text-base font-medium transition text-gray-700 hover:text-primary-orange">
+                    HOME
+                </a>
+                            
+                
+                
+                <a href="http://127.0.0.1:5500/shop.html" class="text-sm xl:text-base font-medium transition text-gray-700 hover:text-primary-orange">
+                    SHOP ALL
+                </a>
+                            
+                
+                
+                <a href="http://127.0.0.1:5500/blog.html" class="text-sm xl:text-base font-medium transition text-gray-700 hover:text-primary-orange">
+                    BEAUTY ARTICLES
+                </a>
+                    </nav>
+
+        
+        <!-- Mobile & Tablet Header Icons (untuk layar di bawah lg) -->
+        <div class="flex items-center space-x-4 lg:hidden">
+            <button id="search-toggle-mobile" class="text-gray-700 hover:text-primary-orange">
+                <i class="fas fa-search"></i>
+            </button>
+            <a href="http://127.0.0.1:5500/cart.html" class="text-gray-700 hover:text-primary-orange relative transition-colors" aria-label="Shopping Cart">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <!-- Hamburger Menu Button -->
+            <button id="menu-toggle" class="text-gray-700">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Desktop Header Icons (hanya untuk layar besar) -->
+        <div class="hidden lg:flex items-center space-x-5">
+
+            
+            <button id="search-toggle-desktop" class="text-gray-700 hover:text-primary-orange transition">
+                <i class="fas fa-search"></i>
+            </button>
+
+            
+            <a href="http://127.0.0.1:5500/cart.html" class="relative text-gray-700 hover:text-primary-orange transition" aria-label="Shopping Cart">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+
+            
+            <a href="http://127.0.0.1:5500/customer/dashboard.html" class="ml-6 text-sm xl:text-base font-semibold transition text-primary-orange border-b-2 border-primary-orange pb-1">
+                DASHBOARD
+            </a>
+
+        </div>
+    </div>
+</header>
+
+<!-- Search Popup -->
+<div id="search-overlay" class="search-overlay fixed inset-0 bg-black bg-opacity-50 z-50"></div>
+<div id="search-popup" class="search-popup fixed top-0 left-0 right-0 bg-primary-light z-50 p-6 shadow-lg">
+    <div class="w-full lg:max-w-7xl mx-auto">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl font-bold text-gray-800">Cari Produk</h2>
+            <button id="close-search" class="text-gray-700">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+        </div>
+
+        <div class="relative mb-6">
+            <input type="text" id="search-input" placeholder="Ketik nama produk yang dicari..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary-orange focus:ring-2 focus:ring-primary-orange focus:ring-opacity-20">
+            <button class="absolute right-3 top-3/4 transform -translate-y-1/2 text-gray-700 hover:text-primary-orange">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <div id="search-results" class="max-h-96 overflow-y-auto scrollbar-hide">
+            <!-- Hasil pencarian akan muncul di sini -->
+            <div id="search-empty" class="text-center py-8 text-gray-500">
+                <i class="fas fa-search text-4xl mb-4 opacity-50"></i>
+                <p>Ketik nama produk untuk memulai pencarian</p>
+            </div>
+
+            <div id="search-loading" class="hidden text-center py-8">
+                <i class="fas fa-spinner fa-spin text-2xl text-primary-orange mb-4"></i>
+                <p>Mencari produk...</p>
+            </div>
+
+            <div id="search-no-results" class="hidden text-center py-8 text-gray-500">
+                <i class="fas fa-times-circle text-4xl mb-4 opacity-50"></i>
+                <p>Produk tidak ditemukan</p>
+                <p class="text-sm">Coba gunakan kata kunci yang berbeda</p>
+            </div>
+
+            <div id="search-results-container" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Template untuk hasil pencarian -->
+                <template id="product-template">
+                    <div class="bg-white rounded-br-[24px] rounded-tl-[24px] hover:shadow-lg hover:shadow-orange-500/50 transition duration-300">
+    <!-- IMAGE -->
+    <div
+        class="relative cursor-pointer"
+        onclick="goToProduct(this)"
+        data-slug=""
+    >
+        <img
+            src=""
+            alt=""
+            class="thumbnail w-full rounded-br-[12px] rounded-tl-[12px] aspect-square object-cover"
+        >
+    </div>
+
+    <!-- CONTENT -->
+    <div class="p-4">
+        <h3
+            class="name font-semibold text-sm text-gray-800 mb-1 cursor-pointer"
+            onclick="goToProduct(this)"
+            data-slug=""
+        ></h3>
+
+        <div class="space-y-0 mb-3">
+            <span class="price font-bold text-primary-red text-lg"></span>
+            <br>
+            <span class="discounted-price text-gray-500 text-sm line-through"></span>
+        </div>
+
+        <!-- ADD TO CART -->
+        <button
+            class="btn-add-to-cart btn-block border border-primary-orange bg-primary-orange text-white text-sm font-semibold py-2 rounded-bl-[48px] rounded-tr-[48px] md:rounded-bl-[12px] md:rounded-tr-[12px] hover:bg-transparent hover:text-primary-orange transition duration-300 flex items-center justify-center space-x-2 mb-1"
+            onclick="addToCartFromSearch(event, this)"
+            data-id=""
+        >
+            <i class="fas fa-shopping-cart"></i>
+            <span>Keranjang</span>
+        </button>
+
+        <!-- VIEW MORE -->
+        <button
+            class="btn-view-more btn-block border border-primary-orange bg-primary-orange text-white text-sm font-semibold py-2 rounded-br-[48px] rounded-tl-[48px] md:rounded-br-[12px] md:rounded-tl-[12px] hover:bg-transparent hover:text-primary-orange transition duration-300 flex items-center justify-center space-x-2"
+            onclick="goToProduct(this)"
+            data-slug=""
+        >
+            <i class="fas fa-eye"></i>
+            <span>View More</span>
+        </button>
+    </div>
+</div>
+
+                </template>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sidebar Menu for Mobile & Tablet -->
+<div id="sidebar-overlay" class="sidebar-overlay fixed inset-0 bg-black bg-opacity-50 z-50"></div>
+<div id="sidebar" class="sidebar fixed top-0 left-0 h-full w-64 bg-white z-50 p-6">
+    <div class="flex justify-between items-center mb-8">
+        <h2 class="text-xl font-bold text-primary-orange hover:cursor-pointer" onclick="window.location.href='http://127.0.0.1:5500';">
+            Inclinique<span class="text-primary-red"> Store</span>
+        </h2>
+        <button id="close-sidebar" class="text-gray-700">
+            <i class="fas fa-times text-xl"></i>
+        </button>
+    </div>
+
+    
+    <nav class="space-y-1">
+
+                    
+            
+            <hr class="border-b border-gray-300">
+
+            <a
+                href="http://127.0.0.1:5500"
+                class="flex items-center gap-3 py-3 px-3 rounded-lg font-medium transition
+                    text-gray-700 hover:text-primary-orange hover:bg-orange-50"
+            >
+                <i class="fas fa-home w-5"></i>
+                <span>HOME</span>
+            </a>
+                    
+            
+            <hr class="border-b border-gray-300">
+
+            <a
+                href="http://127.0.0.1:5500/shop.html"
+                class="flex items-center gap-3 py-3 px-3 rounded-lg font-medium transition
+                    text-gray-700 hover:text-primary-orange hover:bg-orange-50"
+            >
+                <i class="fas fa-shopping-bag w-5"></i>
+                <span>SHOP ALL</span>
+            </a>
+                    
+            
+            <hr class="border-b border-gray-300">
+
+            <a
+                href="http://127.0.0.1:5500/blog.html"
+                class="flex items-center gap-3 py-3 px-3 rounded-lg font-medium transition
+                    text-gray-700 hover:text-primary-orange hover:bg-orange-50"
+            >
+                <i class="fas fa-newspaper w-5"></i>
+                <span>BEAUTY ARTICLES</span>
+            </a>
+        
+        
+        
+        
+        <hr class="border-b border-gray-300">
+
+        <a
+            href="http://127.0.0.1:5500/customer/dashboard.html"
+            class="flex items-center gap-3 py-3 px-3 rounded-lg font-semibold transition
+                bg-primary-orange/10 text-primary-orange"
+        >
+            <i class="fas fa-user w-5"></i>
+            <span>DASHBOARD</span>
+        </a>
+
+        
+        <hr class="border-b border-gray-300">
+
+    </nav>
+</div>
+
+    <main>
+            <section class="bg-gray-50 py-10 md:py-16">
+        <div class="max-w-7xl mx-auto px-4">
+
+            
+            <div class="mb-8">
+                <h1 class="text-2xl md:text-3xl font-bold text-gray-800">
+                    Riwayat Pesanan
+                </h1>
+                <p class="text-gray-500 mt-1">
+                    Kelola data pesanan Anda, cek status pembayaran, dan lihat detail setiap transaksi yang pernah Anda lakukan.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+                
+                <aside
+    x-data="{
+        isMobile: window.innerWidth < 768,
+        open: false
+    }"
+    x-init="
+        const isDashboard = true;
+        const savedState = localStorage.getItem('dashboard_menu');
+
+        if (savedState !== null) {
+            open = savedState === 'true';
+        } else if (!isMobile) {
+            open = true;
+        } else {
+            open = isDashboard;
+        }
+
+        $watch('open', value => {
+            localStorage.setItem('dashboard_menu', value);
+        });
+
+        window.addEventListener('resize', () => {
+            isMobile = window.innerWidth < 768;
+            if (!isMobile) open = true;
+        });
+    "
+    class="bg-white rounded-md shadow-sm border overflow-hidden"
+>
+
+    
+    <div class="flex items-center justify-between p-4 border-b">
+        <span class="font-semibold text-gray-700">
+            Menu Dashboard
+        </span>
+
+        
+        <button
+            x-show="isMobile"
+            @click="open = !open"
+            class="text-gray-500 hover:text-gray-700 transition"
+            title="Toggle Menu"
+        >
+            
+            <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7"/>
+            </svg>
+
+            
+            <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 9l7 7 7-7"/>
+            </svg>
+        </button>
+    </div>
+
+    
+    <div
+        x-show="open"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 -translate-y-2"
+        x-transition:enter-end="opacity-100 translate-y-0"
+        x-transition:leave="transition ease-in duration-200"
+        x-transition:leave-start="opacity-100 translate-y-0"
+        x-transition:leave-end="opacity-0 -translate-y-2"
+        class="md:block"
+    >
+        <nav class="p-4 space-y-1 text-sm">
+
+            
+            
+            <a href="http://127.0.0.1:5500/customer/dashboard.html"
+               class="flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition
+               text-gray-700 hover:bg-gray-100">
+                <i class="fas fa-home w-5"></i>
+                Dashboard
+            </a>
+
+            
+            <a href="http://127.0.0.1:5500/customer/orders.html"
+               class="flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition
+               bg-orange-50 text-primary-orange">
+                <i class="fas fa-box w-5"></i>
+                Riwayat Pesanan
+            </a>
+
+            
+            <a href="http://127.0.0.1:5500/customer/profile.html"
+               class="flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition
+               text-gray-700 hover:bg-gray-100">
+                <i class="fas fa-user w-5"></i>
+                Profile
+            </a>
+
+            
+            <div class="pt-4">
+                <div class="border-t border-gray-200"></div>
+            </div>
+
+            
+            <div class="pt-2">
+                <form method="GET" action="http://127.0.0.1:5500/">
+                    <input type="hidden" name="_token" value="QD3zc14Xxemgwv0EYqVSaF3yig0s7HyRFtSRDvSm" autocomplete="off">                    <button
+                        class="w-full flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition text-red-500 hover:bg-red-50">
+                        <i class="fas fa-sign-out-alt w-5"></i>
+                        Logout
+                    </button>
+                </form>
+            </div>
+
+        </nav>
+    </div>
+</aside>
+
+
+                
+                <main class="lg:col-span-3 space-y-6">
+
+                    
+                    <div class="bg-white rounded-md shadow p-4 md:p-6">
+                        <h2 class="text-lg md:text-xl font-semibold text-gray-800 mb-4">
+                            Detail Pesanan
+                        </h2>
+
+                        <div id="order-container" class="py-6">
+                            <div class="text-center py-10 text-gray-500">
+                                Memuat data...
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+<footer class="bg-gray-800 text-white py-8 lg:pb-12 pb-24">
+    <div class="w-full lg:max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 text-md gap-8">
+            <div class="col-span-1 md:col-span-3 lg:col-span-1">
+                <h3 class="text-2xl font-bold mb-4">Inclinique<span class="text-primary-orange"> Store</span></h3>
+                <p class="text-md text-justify text-gray-300 mb-4">
+                    Rangkaian skincare terbaik dengan formula yang aman dan efektif untuk semua jenis kulit.
+                </p>
+                <div class="flex">
+                    <a href="#" class="text-2xl text-gray-300 hover:text-white px-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-2xl text-gray-300 hover:text-white px-2"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-2xl text-gray-300 hover:text-white px-2"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="text-2xl text-gray-300 hover:text-white px-2"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="uppercase font-semibold border-b-2 pb-4 border-gray-600 mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="http://127.0.0.1:5500" class="text-gray-300 hover:text-white">About Us</a></li>
+                    <li><a href="http://127.0.0.1:5500/shop.html" class="text-gray-300 hover:text-white">Shop All</a></li>
+                    <li><a href="http://127.0.0.1:5500/blog.html" class="text-gray-300 hover:text-white">Beauty Article</a></li>
+                    <li><a href="http://127.0.0.1:5500/#store_locations" class="text-gray-300 hover:text-white">Offline Store</a></li>
+                    <li><a href="http://127.0.0.1:5500" class="text-gray-300 hover:text-white">Order Tracking</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="uppercase font-semibold border-b-2 pb-4 border-gray-600 mb-4">Services</h4>
+                <ul class="space-y-2">
+                    <li><a href="http://127.0.0.1:5500" class="text-gray-300 hover:text-white">FAQ</a></li>
+                    <li><a href="http://127.0.0.1:5500" class="text-gray-300 hover:text-white">Terms & Conditions</a></li>
+                    <li><a href="http://127.0.0.1:5500" class="text-gray-300 hover:text-white">Privacy Policy</a></li>
+                    <li><a href="http://127.0.0.1:5500" class="text-gray-300 hover:text-white">Membership</a></li>
+                    <li><a href="http://127.0.0.1:5500" class="text-gray-300 hover:text-white">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="uppercase font-semibold border-b-2 pb-4 border-gray-600 mb-4">Contact Us</h4>
+                <ul class="space-y-2 text-gray-300">
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mr-3"></i>
+                        <span>+62 857 6711 3554</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-3"></i>
+                        <span>admin@incliniquestore.com</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-map-location-dot mr-3"></i>
+                        <span>Jl. Skincare No. 123, Jakarta</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+            <p>&copy; 2025 Inclinique Store. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Bottom Navigation for Mobile & Tablet -->
+<nav class="bottom-nav fixed bottom-0 w-full bg-white border-t border-gray-200 shadow-md lg:hidden z-50">
+    <div class="max-w-lg mx-auto flex justify-between px-4">
+
+        
+            
+            <a
+                href="http://127.0.0.1:5500"
+                class="flex flex-col items-center justify-center py-2 px-4
+                text-gray-700
+                hover:text-primary-orange transition-colors"
+            >
+                <i class="fas fa-home text-xl"></i>
+                <span class="text-xs font-medium mt-1">Home</span>
+            </a>
+
+        
+            
+            <a
+                href="http://127.0.0.1:5500/shop.html"
+                class="flex flex-col items-center justify-center py-2 px-4
+                text-gray-700
+                hover:text-primary-orange transition-colors"
+            >
+                <i class="fas fa-shopping-bag text-xl"></i>
+                <span class="text-xs font-medium mt-1">Shop All</span>
+            </a>
+
+        
+            
+            <a
+                href="http://127.0.0.1:5500/blog.html"
+                class="flex flex-col items-center justify-center py-2 px-4
+                text-gray-700
+                hover:text-primary-orange transition-colors"
+            >
+                <i class="fas fa-newspaper text-xl"></i>
+                <span class="text-xs font-medium mt-1">Articles</span>
+            </a>
+
+        
+            
+            <a
+                href="http://127.0.0.1:5500/cart.html"
+                class="flex flex-col items-center justify-center py-2 px-4
+                text-gray-700
+                hover:text-primary-orange transition-colors"
+            >
+                <i class="fas fa-shopping-cart text-xl"></i>
+                <span class="text-xs font-medium mt-1">Cart</span>
+            </a>
+
+        
+            
+            <a
+                href="http://127.0.0.1:5500/customer/dashboard.html"
+                class="flex flex-col items-center justify-center py-2 px-4
+                text-primary-orange
+                hover:text-primary-orange transition-colors"
+            >
+                <i class="fas fa-user text-xl"></i>
+                <span class="text-xs font-medium mt-1">Dashboard</span>
+            </a>
+
+        
+    </div>
+</nav>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    /**
+     * Redirect to product detail
+     */
+    function goToProduct(el) {
+        const slug = el.dataset.slug;
+        console.log(slug);
+
+        if (!slug) {
+            console.warn('Product slug not found');
+            return;
+        }
+
+        window.location.href =  'http://127.0.0.1:5500/shop/:slug.html'.replace(':slug', slug);
+    }
+
+    // Data produk untuk pencarian
+    const products = [
+                    {
+                id: 1,
+                slug: "inclinique-renewal-facial-wash-gentle-daily-cleanser-for-skin-renewal-100ml",
+                name: "InClinique Renewal Facial Wash | Gentle Daily Cleanser for Skin Renewal 100ml",
+                category: "Renewal Facial Wash",
+                price: "Rp.179.000",
+                discounted_price: "Rp.214,800",
+                thumbnail: "http://127.0.0.1:8088/storage/products/thumbnail-default.webp"
+            },
+                    {
+                id: 2,
+                slug: "inclinique-renewal-milk-cleanser-soft-nourishing-cleanser-for-daily-skin-preparation-100ml",
+                name: "InClinique Renewal Milk Cleanser | Soft &amp; Nourishing Cleanser for Daily Skin Preparation 100ml",
+                category: "Renewal Milk Cleanser",
+                price: "Rp.149.000",
+                discounted_price: "Rp.178,800",
+                thumbnail: "http://127.0.0.1:8088/storage/products/thumbnail-default.webp"
+            },
+                    {
+                id: 3,
+                slug: "inclinique-renewal-face-toner-skin-preparation-for-consistent-care-100ml",
+                name: "InClinique Renewal Face Toner | Skin Preparation for Consistent Care 100ml",
+                category: "Renewal Face Toner",
+                price: "Rp.179.000",
+                discounted_price: "Rp.214,800",
+                thumbnail: "http://127.0.0.1:8088/storage/products/thumbnail-default.webp"
+            },
+                    {
+                id: 4,
+                slug: "inclinique-renewal-serum-targeted-skin-renewal-serum-with-niacinamide-ceramide-20ml",
+                name: "InClinique Renewal Serum | Targeted Skin Renewal Serum with Niacinamide &amp; Ceramide 20ml",
+                category: "Renewal Serum",
+                price: "Rp.194.000",
+                discounted_price: "Rp.232,800",
+                thumbnail: "http://127.0.0.1:8088/storage/products/thumbnail-default.webp"
+            },
+                    {
+                id: 5,
+                slug: "inclinique-renewal-night-cream-night-care-for-skin-recovery-20g",
+                name: "InClinique Renewal Night Cream | Night Care for Skin Recovery 20g",
+                category: "Renewal Night Cream",
+                price: "Rp.184.000",
+                discounted_price: "Rp.220,800",
+                thumbnail: "http://127.0.0.1:8088/storage/products/thumbnail-default.webp"
+            },
+                    {
+                id: 6,
+                slug: "inclinique-renewal-daily-sunscreen-daily-sun-protection-with-niacinamide-uv-filter-20gr",
+                name: "InClinique Renewal Daily Sunscreen | Daily Sun Protection with Niacinamide &amp; UV Filter 20gr",
+                category: "Renewal Daily Sunscreen",
+                price: "Rp.199.000",
+                discounted_price: "Rp.238,800",
+                thumbnail: "http://127.0.0.1:8088/storage/products/thumbnail-default.webp"
+            },
+                    {
+                id: 7,
+                slug: "inclinique-renewal-core-duo-overnight-skin-renewal-routine-serum-night-cream",
+                name: "InClinique Renewal Core Duo | Overnight Skin Renewal Routine (Serum + Night Cream)",
+                category: "Renewal Core Duo",
+                price: "Rp.364.000",
+                discounted_price: "Rp.436,800",
+                thumbnail: "http://127.0.0.1:8088/storage/products/thumbnail-default.webp"
+            },
+                    {
+                id: 8,
+                slug: "inclinique-renewal-series-complete-skin-renewal-system",
+                name: "InClinique Renewal Series | Complete Skin Renewal System",
+                category: "Renewal Series",
+                price: "Rp.975.000",
+                discounted_price: "Rp.1,170,000",
+                thumbnail: "http://127.0.0.1:8088/storage/products/thumbnail-default.webp"
+            },
+            ];
+
+    console.log(products, 'Loaded products for search functionality');
+    console.log(products[0], 'Loaded details of product for search functionality');
+
+    // JavaScript untuk interaktivitas
+    document.addEventListener('DOMContentLoaded', function() {
+        // Search functionality
+        const searchToggleMobile = document.getElementById('search-toggle-mobile');
+        const searchToggleDesktop = document.getElementById('search-toggle-desktop');
+        const closeSearch = document.getElementById('close-search');
+        const searchPopup = document.getElementById('search-popup');
+        const searchOverlay = document.getElementById('search-overlay');
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+        const searchEmpty = document.getElementById('search-empty');
+        const searchLoading = document.getElementById('search-loading');
+        const searchNoResults = document.getElementById('search-no-results');
+        const searchResultsContainer = document.getElementById('search-results-container');
+        const productTemplate = document.getElementById('product-template');
+
+        function openSearch() {
+            searchPopup.classList.add('open');
+            searchOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            // Focus pada input search
+            setTimeout(() => {
+                searchInput.focus();
+            }, 300);
+        }
+
+        function closeSearchFunc() {
+            searchPopup.classList.remove('open');
+            searchOverlay.classList.remove('open');
+            document.body.style.overflow = 'auto';
+            // Reset pencarian
+            searchInput.value = '';
+            showEmptyState();
+        }
+
+        // Event listeners untuk search
+        if (searchToggleMobile) {
+            searchToggleMobile.addEventListener('click', openSearch);
+        }
+        if (searchToggleDesktop) {
+            searchToggleDesktop.addEventListener('click', openSearch);
+        }
+        if (closeSearch) {
+            closeSearch.addEventListener('click', closeSearchFunc);
+        }
+        if (searchOverlay) {
+            searchOverlay.addEventListener('click', closeSearchFunc);
+        }
+
+        // Fungsi untuk menampilkan state kosong
+        function showEmptyState() {
+            searchEmpty.classList.remove('hidden');
+            searchLoading.classList.add('hidden');
+            searchNoResults.classList.add('hidden');
+            searchResultsContainer.classList.add('hidden');
+        }
+
+        // Fungsi untuk menampilkan loading
+        function showLoading() {
+            searchEmpty.classList.add('hidden');
+            searchLoading.classList.remove('hidden');
+            searchNoResults.classList.add('hidden');
+            searchResultsContainer.classList.add('hidden');
+        }
+
+        // Fungsi untuk menampilkan hasil
+        function showResults(filteredProducts) {
+            searchEmpty.classList.add('hidden');
+            searchLoading.classList.add('hidden');
+
+            if (filteredProducts.length === 0) {
+                searchNoResults.classList.remove('hidden');
+                searchResultsContainer.classList.add('hidden');
+            } else {
+                searchNoResults.classList.add('hidden');
+                searchResultsContainer.classList.remove('hidden');
+
+                // Clear previous results
+                searchResultsContainer.innerHTML = '';
+
+                // Add new results
+                filteredProducts.forEach(product => {
+                    const productElement = productTemplate.content.cloneNode(true);
+
+                    // Set product data
+                    productElement.querySelector('.thumbnail').src = product.thumbnail;
+                    productElement.querySelector('.thumbnail').alt = product.name;
+                    productElement.querySelector('.name').textContent = product.name;
+                    productElement.querySelector('.price').textContent = product.price;
+                    productElement.querySelector('.discounted-price').textContent = product.discounted_price;
+                    productElement.querySelector('[data-slug]').dataset.slug = product.slug;
+                    productElement.querySelector('.btn-view-more').dataset.slug = product.slug;
+                    productElement.querySelector('.btn-add-to-cart').dataset.id = product.id;
+
+                    searchResultsContainer.appendChild(productElement);
+                });
+            }
+        }
+
+        // Fungsi untuk melakukan pencarian
+        function performSearch(query) {
+            if (query.length < 2) {
+                showEmptyState();
+                return;
+            }
+
+            showLoading();
+
+            // Simulasi delay pencarian
+            setTimeout(() => {
+                const filteredProducts = products.filter(product =>
+                    product.name.toLowerCase().includes(query.toLowerCase()) ||
+                    product.category.toLowerCase().includes(query.toLowerCase())
+                );
+
+                showResults(filteredProducts);
+            }, 500);
+        }
+
+        // Event listener untuk input search
+        if (searchInput) {
+            let searchTimeout;
+            searchInput.addEventListener('input', function() {
+                clearTimeout(searchTimeout);
+                const query = this.value.trim();
+
+                searchTimeout = setTimeout(() => {
+                    performSearch(query);
+                }, 300);
+            });
+        }
+
+        // Sidebar toggle functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeSidebar = document.getElementById('close-sidebar');
+        const sidebar = document.getElementById('sidebar');
+        const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+        function openSidebar() {
+            sidebar.classList.add('open');
+            sidebarOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSidebarFunc() {
+            sidebar.classList.remove('open');
+            sidebarOverlay.classList.remove('open');
+            document.body.style.overflow = 'auto';
+        }
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', openSidebar);
+        }
+        if (closeSidebar) {
+            closeSidebar.addEventListener('click', closeSidebarFunc);
+        }
+        if (sidebarOverlay) {
+            sidebarOverlay.addEventListener('click', closeSidebarFunc);
+        }
+
+        // Skin type buttons functionality
+        const skinTypeButtons = document.querySelectorAll('.skin-type-btn');
+        const skinContents = document.querySelectorAll('.skin-content');
+
+        skinTypeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Hapus kelas active dari semua tombol dan reset style
+                skinTypeButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.style.backgroundColor = '';
+                    btn.style.color = '';
+                    btn.style.borderColor = '';
+                });
+
+                // Tambah kelas active ke tombol yang diklik
+                this.classList.add('active');
+                this.style.backgroundColor = '#FA812F';
+                this.style.color = 'white';
+                this.style.borderColor = '#FA812F';
+
+                // Sembunyikan semua konten
+                skinContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+
+                // Tampilkan konten yang sesuai
+                const skinType = this.getAttribute('data-type');
+                const targetContent = document.getElementById(`skin-${skinType}`);
+                if (targetContent) {
+                    targetContent.classList.remove('hidden');
+                }
+            });
+        });
+
+        // Set active state untuk tombol default
+        const defaultButton = document.querySelector('.skin-type-btn.active');
+        if (defaultButton) {
+            defaultButton.style.backgroundColor = '#FA812F';
+            defaultButton.style.color = 'white';
+            defaultButton.style.borderColor = '#FA812F';
+        }
+
+        // Product card hover effect
+        const productCards = document.querySelectorAll('.product-card');
+
+        productCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
+            });
+
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 4px 6px rgba(0,0,0,0.05)';
+            });
+        });
+
+        // Smooth scroll untuk anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Newsletter form submission
+        const newsletterForm = document.querySelector('section.bg-primary-orange form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const emailInput = this.querySelector('input[type="email"]');
+                if (emailInput && emailInput.value) {
+                    alert('Terima kasih! Anda telah berlangganan newsletter kami.');
+                    emailInput.value = '';
+                } else {
+                    alert('Silakan masukkan alamat email yang valid.');
+                }
+            });
+        }
+
+        // Intersection Observer untuk animasi scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Terapkan animasi pada elemen yang diinginkan
+        document.querySelectorAll('.product-card, .skin-content > div').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Handle window resize
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            document.body.classList.add('resize-animation-stopper');
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                document.body.classList.remove('resize-animation-stopper');
+            }, 400);
+        });
+
+        // Tambahkan style untuk resize animation stopper
+        const style = document.createElement('style');
+        style.textContent = `
+                .resize-animation-stopper * {
+                    animation: none !important;
+                    transition: none !important;
+                }
+            `;
+        document.head.appendChild(style);
+    });
+</script>
+
+    <!-- Custom Scripts JS -->
+        <script>
+        const orderId = 2;
+        const container = document.getElementById('order-container');
+
+        function loadOrder() {
+            fetch(`/customer/orders/${orderId}/json`)
+                .then(res => res.json())
+                .then(data => {
+
+                    let itemsHtml = '';
+
+                    data.items.forEach(item => {
+                        itemsHtml += `
+                        <tr class="border-b">
+                            <td class="py-2">${item.product}</td>
+                            <td class="py-2">Rp ${item.price}</td>
+                            <td class="py-2">${item.qty}</td>
+                            <td class="py-2 font-semibold">Rp ${item.subtotal}</td>
+                        </tr>
+                    `;
+                    });
+
+                    container.innerHTML = `
+                    <div class="space-y-4">
+
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="text-gray-500">Order Number</p>
+                                <p class="font-semibold">${data.order_number}</p>
+                            </div>
+
+                            <div class="text-right">
+                                <p class="text-gray-500">Status</p>
+                                <p class="font-semibold uppercase">${data.status}</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-gray-500">Tanggal</p>
+                            <p>${data.created_at}</p>
+                        </div>
+
+                        <div>
+                            <p class="text-gray-500">Alamat</p>
+                            <p>${data.address ?? '-'}</p>
+                        </div>
+
+                        <div>
+                            <p class="text-gray-500">Store</p>
+                            <p>${data.store ?? '-'}</p>
+                        </div>
+
+                        <div class="mt-6">
+                            <h3 class="font-semibold mb-3">Daftar Item</h3>
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b text-left">
+                                        <th class="pb-2">Produk</th>
+                                        <th class="pb-2">Harga</th>
+                                        <th class="pb-2">Qty</th>
+                                        <th class="pb-2">Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${itemsHtml}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="flex justify-end mt-6 text-lg font-bold">
+                            Total: Rp ${data.grand_total}
+                        </div>
+
+                    </div>
+                `;
+                });
+        }
+
+        loadOrder();
+
+        // 🔥 Realtime polling setiap 5 detik
+        setInterval(loadOrder, 5000);
+    </script>
+    <script>
+        function addToCartFromSearch(event, el) {
+            if (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+
+            const productId = el.dataset.id;
+            if (!productId) return false;
+
+            const button = event?.currentTarget;
+            if (!button) return false;
+
+            const icon = button.querySelector('i');
+            const textSpan = button.querySelector('span');
+
+            const originalIcon = icon.className;
+            const originalText = textSpan.textContent;
+            const originalBg = button.style.backgroundColor;
+
+            button.disabled = true;
+            icon.className = 'fas fa-spinner fa-spin';
+            textSpan.textContent = 'Adding...';
+
+            fetch("http://127.0.0.1:5500/cart/add", {
+                method: "POST",
+                headers: {
+                    "X-CSRF-TOKEN": "QD3zc14Xxemgwv0EYqVSaF3yig0s7HyRFtSRDvSm",
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                },
+                body: JSON.stringify({
+                    product_id: productId,
+                    qty: 1
+                })
+            })
+            .then(res => {
+                if (res.status === 401) {
+                    window.location.href = "http://127.0.0.1:5500/login.html";
+                    return null;
+                }
+                return res.json();
+            })
+            .then(data => {
+                if (!data) return;
+
+                if (data.success) {
+                    icon.className = 'fas fa-check';
+                    textSpan.textContent = 'Ditambahkan!';
+                    button.style.backgroundColor = '#10B981';
+
+                    if (typeof updateCartBadge === 'function' && data.cart_count !== undefined) {
+                        updateCartBadge(data.cart_count);
+                    }
+
+                    if (typeof showToast === 'function') {
+                        showToast(data.message, 'success');
+                    }
+                } else {
+                    throw new Error(data.message || 'Gagal menambahkan ke keranjang');
+                }
+            })
+            .catch(err => {
+                icon.className = originalIcon;
+                textSpan.textContent = originalText;
+
+                if (typeof showToast === 'function') {
+                    showToast(err.message || 'Terjadi kesalahan sistem', 'error');
+                }
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    button.disabled = false;
+                    icon.className = originalIcon;
+                    textSpan.textContent = originalText;
+                    button.style.backgroundColor = originalBg;
+                }, 1500);
+            });
+
+            return false;
+        }
+    </script>
+
+</body>
+</html>
